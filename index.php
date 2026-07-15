@@ -13,7 +13,7 @@ function handler(array $event, $context): array
 {
     $version    = $event['version'] ?? '1.0';
     $session    = $event['session'] ?? [];
-    $userId     = $session['user_id'] ?? null;
+    $userId     = $session['user']['user_id'] ?? null; // глобальный идентификатор пользователя Яндекса
     $endSession = true;
     $house      = '';
     $text       = '';
